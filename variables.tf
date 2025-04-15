@@ -1,34 +1,4 @@
-variable "backend-s3-bucket-key" {
-  description = "The S3 bucket key for the Terraform file state file"
-  type        = string
-  default     = "global/s3/terraform.tfstate"
-}
-
-variable "backend-s3-bucket-name" {
-  description = "The S3 bucket name for the Terraform file state file"
-  type        = string
-  default     = "lk-tform-bucket"
-}
-
-variable "backend-dynamodb-table" {
-  description = "The DynamoDB table key for the Terraform file state file"
-  type        = string
-  default     = "terraform-lock-lk"
-}
-
-variable "infra-region-1" {
-  description = "The AWS region for the backend"
-  type        = string
-  default     = "us-east-1"
-}
-
-variable "infra-region-2" {
-  description = "The AWS region for the backend"
-  type        = string
-  default     = "us-east-2"
-}
-
-variable "vpc-cidr-block" {
+variable "vpc_cidr_block" {
   description = "The CIDR block for the VPC"
   type        = string
   default     = "10.0.0.0/16"
@@ -62,7 +32,7 @@ variable "instance_type" {
 }
 
 #ami id for the instance
-variable "ami-id" {
+variable "ami_id" {
   description = "The AMI ID for the EC2 instance"
   type        = string
   default     = "ami-00a929b66ed6e0de6"
