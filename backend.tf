@@ -4,7 +4,7 @@ terraform {
     bucket         = "lk-tform-bucket"
     key            = "global/s3/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "terraform-lock-lk"
+    use_lockfile   = true
     encrypt        = true
   }
 }
